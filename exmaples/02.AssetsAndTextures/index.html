@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>Assets and Textures</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="wood" src="../../images/textures/wood.jpg" />
+            <img id="marble" src="../../images/textures/marble.jpg" />
+            <img id="linen" src="../../images/textures/linen.jpg" />
+            <img id="brick" src="../../images/textures/brick.jpg" />
+        </a-assets>
+
+        <a-plane position="0 0 -6" rotation="-90 0 0" width="2" height="8" src="#wood" repeat="2 6">
+        </a-plane>
+        <a-torus position="0 0.9 -3" radius="1.6" radius-tubular="0.1" src="#linen" repeat="8 1"></a-torus>
+        <a-box position="-.4 0.5 -9" rotation="0 45 0" src="#brick"></a-box>
+        <a-sphere position="0.8 0.5 -5" radius="0.5" src="#marble"></a-sphere>
+
+        <a-sky color="grey"></a-sky>
+    </a-scene>
+</body>
+
+</html>
