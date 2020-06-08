@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <script src="../../libs/aframe-environment-component.min.js"></script>
+    <title>Environment</title>
+</head>
+
+<body>
+    <a-scene vr-mode-ui="enabled: false">
+        <a-entity id="environment" environment="preset: default"></a-entity>
+    </a-scene>
+
+
+    <!-- 以下代码仅用于动态变换场景使用，在实际使用时可以删除 -->
+    <div id="current"
+        style="position:fixed;bottom: 0;left:0;padding:20px;background-color: rgba(255,255,255,0.5);text-align: center;">
+        default
+    </div>
+
+    <div id="next"
+        style="position:fixed;bottom: 0;right:0;padding:20px;background-color: rgba(255,255,255,0.5);text-align: center;">
+        下一个环境
+    </div>
+
+    <script>
+        var entityEnvironment = document.getElementById('environment'); // 获取环境组件的元素句柄
+        var current = document.getElementById('current'); // 获取当前环境的名称的div元素
+        var nextButton = document.getElementById('next'); // 获取下一个环境的div元素
+        var environmentList = [ // 17种不同的环境
+            'default', 'contact', 'egypt', 'checkerboard', 'forest',
+            'goaland', 'yavapai', 'goldmine', 'threetowers', 'poison',
+            'arches', 'tron', 'japan', 'dream', 'volcano', 'starry',
+            'osiris'];
+        var environmentIdx = 0; // 当前环境索引
+        nextButton.onclick = function () { // 给下一个环境的div元素添加点击事件，每点击一次切换一个环境
+            environmentIdx = (environmentIdx + 1) % environmentList.length; // 获得下一个环境的索引，到了最后一个又从0开始
+            entityEnvironment.setAttribute('environment', 'preset: ' + environmentList[environmentIdx]); // 设置环境
+            current.innerText = environmentList[environmentIdx]; // 更换当前环境名称
+        };
+    </script>
+</body>
+
+</html>
