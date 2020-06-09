@@ -15,7 +15,7 @@
     </a-scene>
 
 
-    <!-- 以下代码仅用于动态变换场景使用，在实际使用时可以删除 -->
+    <!-- 以下代码仅用于动态变换场景使 -->
     <div id="current"
         style="position:fixed;bottom: 0;left:0;padding:20px;background-color: rgba(255,255,255,0.5);text-align: center;">
         default
@@ -27,19 +27,19 @@
     </div>
 
     <script>
-        var entityEnvironment = document.getElementById('environment'); // 获取环境组件的元素句柄
-        var current = document.getElementById('current'); // 获取当前环境的名称的div元素
-        var nextButton = document.getElementById('next'); // 获取下一个环境的div元素
+        var entityEnvironment = document.getElementById('environment'); // 获取环境组件的元素
+        var currentDiv = document.getElementById('current'); // 获取当前环境名称的div元素
+        var nextDiv = document.getElementById('next'); // 获取下一个环境的div元素
         var environmentList = [ // 17种不同的环境
             'default', 'contact', 'egypt', 'checkerboard', 'forest',
             'goaland', 'yavapai', 'goldmine', 'threetowers', 'poison',
             'arches', 'tron', 'japan', 'dream', 'volcano', 'starry',
             'osiris'];
         var environmentIdx = 0; // 当前环境索引
-        nextButton.onclick = function () { // 给下一个环境的div元素添加点击事件，每点击一次切换一个环境
+        nextDiv.onclick = function () { // 给下一个环境的div元素添加点击事件，每点击一次切换一个环境
             environmentIdx = (environmentIdx + 1) % environmentList.length; // 获得下一个环境的索引，到了最后一个又从0开始
-            entityEnvironment.setAttribute('environment', 'preset: ' + environmentList[environmentIdx]); // 设置环境
-            current.innerText = environmentList[environmentIdx]; // 更换当前环境名称
+            entityEnvironment.setAttribute('environment', 'preset: ' + environmentList[environmentIdx]); // 设置新环境
+            currentDiv.innerText = environmentList[environmentIdx]; // 更换当前环境名称
         };
     </script>
 </body>
