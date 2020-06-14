@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <script src="../../libs/aframe-environment-component.min.js"></script>
+    <title>Animation</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="wood" src="../../images/textures/wood.jpg" />
+            <img id="rock" src="../../images/textures/rock.jpg" />
+        </a-assets>
+        <a-entity environment> </a-entity>
+
+        <a-plane position="0 0.5 -4" rotation="-90 0 0" width="4" height="4"
+            animation="property:color; from:#000000; to:rgb(255, 255, 0); dur:10000"></a-plane>
+
+        <a-sphere position="-2 0.7 -2.2" radius="0.2" src="#wood"
+            animation="property:object3D.position.x; from:-2; to:2; dur:2000;loop:true; dir:normal"></a-sphere>
+
+        <a-sphere position="-2 0.7 -3" radius="0.2" src="#wood"
+            animation="property:object3D.position.x; from:-2; to:2; dur:2000;loop:true; dir:reverse"></a-sphere>
+
+        <a-sphere position="-2 0.7 -4" radius="0.2" src="#wood"
+            animation="property:object3D.position.x; from:-2; to:2; dur:2000;loop:true; dir:alternate"></a-sphere>
+
+        <a-cylinder position="0 0.65 -5" color="crimson" height=".3" radius="0.5"
+            animation="property:scale; to:2 1 2; delay:2000;dur:1000; loop:5"></a-cylinder>
+
+        <a-entity position="0 1.25 -5" animation="property:rotation.y; to:360; dur:3000; loop:true">
+            <a-box rotation="-35 -40 45" scale="0.5 0.5 0.5" src="#rock"></a-box>
+        </a-entity>
+
+    </a-scene>
+</body>
+
+</html>
