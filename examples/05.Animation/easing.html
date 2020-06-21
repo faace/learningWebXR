@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-template-component@3.x.x/dist/aframe-template-component.min.js"></script>
+    <title>Animation Easing</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <script id="box" type="text/html">
+                <a-entity
+                    geometry="primitive: plane; height: 0.15; width: 0.15"
+                    material="color: ${color};"
+                    position="-4 ${y} -5"
+                    animation="property: object3D.position.x; from: -4; to: 4; dur: 5000; easing:${ease};loop:true;"
+                    >
+                </a-entity>
+                <a-entity text="value: ${ease}; align:right; anchor: right;color: ${color};height:3;" scale="3 3 1" position="-4.3 ${y} -5"></a-entity>
+                <a-entity text="value: ${ease}; align:left; anchor: left;color: ${color};height:3;" scale="3 3 1" position="4.3 ${y} -5"></a-entity>
+            </script>
+        </a-assets>
+
+        <a-entity geometry="primitive: plane; height: 8; width: 0.1" material="color: red;" position="-4.1 1.5 -5">
+        </a-entity>
+
+        <a-entity geometry="primitive: plane; height: 8; width: 0.1" material="color: red;" position="4.1 1.5 -5">
+        </a-entity>
+
+        <a-entity template="src: #box" data-y="5.2" data-ease="linear" data-color="red"></a-entity>
+
+        <a-entity template="src: #box" data-y="4.8" data-ease="easeInQuad" data-color="blue"></a-entity>
+        <a-entity template="src: #box" data-y="4.6" data-ease="easeOutQuad" data-color="blue"></a-entity>
+        <a-entity template="src: #box" data-y="4.4" data-ease="easeInOutQuad" data-color="blue"></a-entity>
+
+        <a-entity template="src: #box" data-y="4.0" data-ease="easeInCubic" data-color="red"></a-entity>
+        <a-entity template="src: #box" data-y="3.8" data-ease="easeOutCubic" data-color="red"></a-entity>
+        <a-entity template="src: #box" data-y="3.6" data-ease="easeInOutCubic" data-color="red"></a-entity>
+
+        <a-entity template="src: #box" data-y="3.2" data-ease="easeInQuart" data-color="blue"></a-entity>
+        <a-entity template="src: #box" data-y="3.0" data-ease="easeOutQuart" data-color="blue"></a-entity>
+        <a-entity template="src: #box" data-y="2.8" data-ease="easeInOutQuart" data-color="blue"></a-entity>
+
+        <a-entity template="src: #box" data-y="2.4" data-ease="easeInQuint" data-color="red"></a-entity>
+        <a-entity template="src: #box" data-y="2.2" data-ease="easeOutQuint" data-color="red"></a-entity>
+        <a-entity template="src: #box" data-y="2.0" data-ease="easeInOutQuint" data-color="red"></a-entity>
+
+        <a-entity template="src: #box" data-y="1.6" data-ease="easeInSine" data-color="blue"></a-entity>
+        <a-entity template="src: #box" data-y="1.4" data-ease="easeOutSine" data-color="blue"></a-entity>
+        <a-entity template="src: #box" data-y="1.2" data-ease="easeInOutSine" data-color="blue"></a-entity>
+
+        <a-entity template="src: #box" data-y="0.8" data-ease="easeInExpo" data-color="red"></a-entity>
+        <a-entity template="src: #box" data-y="0.6" data-ease="easeOutExpo" data-color="red"></a-entity>
+        <a-entity template="src: #box" data-y="0.4" data-ease="easeInOutExpo" data-color="red"></a-entity>
+
+        <a-entity template="src: #box" data-y="0" data-ease="easeInCirc" data-color="blue"></a-entity>
+        <a-entity template="src: #box" data-y="-0.2" data-ease="easeOutCirc" data-color="blue"></a-entity>
+        <a-entity template="src: #box" data-y="-0.4" data-ease="easeInOutCirc" data-color="blue"></a-entity>
+
+        <a-entity template="src: #box" data-y="-0.8" data-ease="easeInBack" data-color="red"></a-entity>
+        <a-entity template="src: #box" data-y="-1" data-ease="easeOutBack" data-color="red"></a-entity>
+        <a-entity template="src: #box" data-y="-1.2" data-ease="easeInOutBack" data-color="red"></a-entity>
+
+        <a-entity template="src: #box" data-y="-1.6" data-ease="easeInElastic" data-color="blue"></a-entity>
+        <a-entity template="src: #box" data-y="-1.8" data-ease="easeOutElastic" data-color="blue"></a-entity>
+        <a-entity template="src: #box" data-y="-2" data-ease="easeInOutElastic" data-color="blue"></a-entity>
+
+        <a-camera>
+            <a-cursor></a-cursor>
+        </a-camera>
+    </a-scene>
+</body>
+
+</html>
+
+
+<!-- 
+<a-box 
+    animation="property:rotation.y; to:360; dur:3000; loop:true"
+    animation__2="property:color; from:#ff0000; to:#00ffff; dur:3000; loop:true; dir:alternate"
+    animation__scale="property:scale; from:1 1 1; to:0.2 0.2 0.2; dur:3000; loop:true; dir:alternate">
+</a-box> -->
