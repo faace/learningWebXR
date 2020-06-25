@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../libs/aframe.js"></script>
+    <title>Animation Lottery</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="panel" src="../../images/animation/lotteryPanel.png">
+            <img id="pointer" src="../../images/animation/lotteryPointer.png">
+        </a-assets>
+
+        <a-image id="panle" src="#panel" position="0 1.6 -.7"
+            animation="property: rotation; from: 0 0 0; to: 0 0 3620; dur: 5000; easing: easeInOutQuad; startEvents: click">
+        </a-image>
+
+        <a-image src="#pointer" width="0.262" height="0.35" position="0 1.65 -.6"> </a-image>
+
+        <a-camera>
+            <a-cursor objects="#panle" position="0 0 -0.4"></a-cursor>
+        </a-camera>
+    </a-scene>
+</body>
+
+</html>

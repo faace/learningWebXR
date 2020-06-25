@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../libs/aframe.js"></script>
+    <title>Animation Earth</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="sky" src="../../images/animation/sky.jpg">
+            <img id="sun" src="../../images/animation/sun.jpg">
+            <img id="earth" src="../../images/animation/earth.jpg">
+            <img id="moon" src="../../images/animation/moon.jpg">
+        </a-assets>
+
+        <a-entity position="0 0 -10" geometry="primitive: sphere; radius: 2.5" material="src:#sun"
+            animation="property: rotation; to: 0 360 0; dur: 30000; easing: linear; loop:true">
+        </a-entity>
+        <a-entity position="0 0 -10" animation="property: rotation; to: 0 360 0; dur: 36500; easing: linear; loop:true">
+            <a-entity position="5 0 0" geometry="primitive: sphere; radius:0.8;" material="src:#earth"
+                animation="property: rotation; to: 0 360 0; dur: 1000; easing: linear; loop:true">
+            </a-entity>
+            <a-entity position="5 0 0"
+                animation="property: rotation; to: 0 360 0; dur: 3000; easing: linear; loop:true">
+                <a-entity position="1 0 0" geometry="primitive: sphere; radius:0.2;" material="src:#moon"
+                    animation="property: rotation; to: 0 360 0; dur: 3000; easing: linear; loop:true">
+                </a-entity>
+            </a-entity>
+        </a-entity>
+
+        <a-sky src="#sky"></a-sky>>
+    </a-scene>
+</body>
+
+</html>

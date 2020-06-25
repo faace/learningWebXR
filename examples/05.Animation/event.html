@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.js"></script>
+    <title>Animation Event</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="rock" src="../../images/textures/rock.jpg">
+        </a-assets>
+
+        <a-sphere color="#ffff00" position="0 1.5 -5" radius="0.5"
+            animation__click="property: position; from: 0 1.5 -5; to: 0 6 -5; dur: 1000; easing :easeInElastic; startEvents: click"
+            animation__click2="property: position; from: 0 6 -5; to: 0 1.5 -5; dur: 1000; easing: easeOutElastic; delay:1000;startEvents: click">
+        </a-sphere>
+
+        <a-box position="-2 3 -5" color="blue"
+            animation="property: scale; from:1 1 1; to: .5 .5 .5; dur: 500;dir:reverse;startEvents: mouseenter,mouseleave">
+        </a-box>
+
+        <a-cylinder color="#ff0000" position="0 3 -5" radius="0.5"
+            animation__mouseenter="property: color; to: #0000ff; startEvents: mouseenter; dur: 1000"
+            animation__mouseleave="property: color; to: #ff0000; startEvents: mouseleave; dur: 1000">
+        </a-cylinder>
+
+        <a-box position="2 3 -5" material="src:#rock"
+            animation="property: rotation; to: 0 360 0; dur: 3000; loop:true; resumeEvents: mouseenter; pauseEvents: mouseleave; autoplay:false">
+        </a-box>
+
+        <a-camera>
+            <a-cursor></a-cursor>
+        </a-camera>
+    </a-scene>
+</body>
+
+</html>
