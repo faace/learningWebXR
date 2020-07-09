@@ -5,18 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../../libs/aframe.min.js"></script>
-    <title>Light</title>
+    <title>Lights</title>
+    <style>
+        a {
+            display: block;
+            line-height: 30px;
+            height: 30px;
+            border: 1px solid #000;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        div {
+            height: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <a-scene>
-        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-
-        <a-sky color="#ECECEC"></a-sky>
-    </a-scene>
+    <a href="../01.HelloWorld/index.html">默认效果</a>
+    <div></div>
+    <a href="./noLight.html">无光源效果</a>
+    <div></div>
+    <a href="./ambient1.html">1.颜色为#BBBBBB，强度为1.0的环境光</a>
+    <a href="./ambient2.html">2.颜色为#FF0000，强度为1.0的环境光</a>
+    <a href="./ambient3.html">3.颜色为#FF0000，强度为2.0的环境光</a>
+    <div></div>
+    <a href="./hemisphere.html">半球光</a>
+    <div></div>
+    <a href="./directional.html">方向光</a>
+    <div></div>
+    <a href="./point1.html">1.衰减度为1，距离为0.0（无限远）的点光源</a>
+    <a href="./point2.html">2.衰减度为1，距离为1.0的点光源</a>
+    <a href="./point3.html">3.衰减度为2，距离为1.0的点光源</a>
+    <div></div>
+    <a href="./spot1.html">1.夹角为45度的聚光灯</a>
+    <a href="./spot2.html">2.夹角为30度的聚光灯</a>
+    <a href="./spot3.html">3.夹角为30度，半影区为1.0的聚光灯</a>
+    <a href="./spot4.html">4.夹角为30度，半影区为1.0，距离为4.0的聚光灯</a>
+    <a href="./spotTarget.html">5.夹角为45度，照射目标为圆柱体的聚光灯</a>
 </body>
 
 </html>
