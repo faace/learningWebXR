@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>ambientOcclusionMap Material</title>
+    <script>
+        AFRAME.registerComponent('ao-map', {
+            init: function () {
+                var geometry = this.el.getObject3D('mesh').geometry;
+                geometry.setAttribute('uv2', new THREE.BufferAttribute(geometry.attributes.uv.array, 2));
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="earth" src="../../images/material/earth.jpg" />
+            <img id="aoMap" src="../../images/material/white.ambientOcclusionMap.jpg" />
+        </a-assets>
+
+        <a-sphere position="-1.5 1 -4" material="src:#earth;""> </a-sphere>
+        <a-sphere position=" 1.5 1 -4" material="src:#earth;ambientOcclusionMap:#aoMap;" ao-map> </a-sphere>
+
+        <a-sphere position="-1.5 3.5 -4" material="color:#ffff00;"> </a-sphere>
+        <a-sphere position="1.5 3.5 -4" material="ambientOcclusionMap:#aoMap;color:#ffff00;" ao-map> </a-sphere>
+
+        <a-entity light="type: ambient; color: #FFFFFF; intensity: 1.0"></a-entity>
+
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+</body>
+
+</html>

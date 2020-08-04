@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>displacementMap Material</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="brick" src="../../images/textures/brick.jpg" />
+            <img id="brickDisplacement" src="../../images/material/brickDisplacement.jpg" />
+        </a-assets>
+
+        <a-plane position="0 1.6 -2" rotation="0 -45 0" segments-depth="128" segments-height="128" segments-width="128"
+            scale="2 2"
+            material="src:#brick; displacementMap:#brickDisplacement; displacementScale:0.3 0.3;displacementBias:0"
+            animation="property: rotation; from:0 -45 0;to: 0 45 0; dur: 3000; easing: linear; loop:true; dir:alternate">
+        </a-plane>
+
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+</body>
+
+</html>
