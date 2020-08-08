@@ -20,14 +20,14 @@
     <a-scene>
         <a-assets>
             <img id="earth" src="../../images/material/earth.jpg" />
-            <img id="aoMap" src="../../images/material/white.ambientOcclusionMap.jpg" />
+            <img id="aoMap" src="../../images/material/ambientOcclusionMap.jpg" />
         </a-assets>
 
         <a-sphere position="-1.5 1 -4" material="src:#earth;""> </a-sphere>
-        <a-sphere position=" 1.5 1 -4" material="src:#earth;ambientOcclusionMap:#aoMap;" ao-map> </a-sphere>
+        <a-sphere position=" -1.5 3.5 -4" material="color:#ffff00;"> </a-sphere>
 
-        <a-sphere position="-1.5 3.5 -4" material="color:#ffff00;"> </a-sphere>
-        <a-sphere position="1.5 3.5 -4" material="ambientOcclusionMap:#aoMap;color:#ffff00;" ao-map> </a-sphere>
+        <a-sphere position=" 1.5 1 -4" material="src:#earth;ambientOcclusionMap:#aoMap;" ao-map> </a-sphere>
+        <a-sphere position="1.5 3.5 -4" material="color:#ffff00;ambientOcclusionMap:#aoMap" ao-map> </a-sphere>
 
         <a-entity light="type: ambient; color: #FFFFFF; intensity: 1.0"></a-entity>
 
