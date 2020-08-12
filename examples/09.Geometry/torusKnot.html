@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>TorusKnot Geometry</title>
+</head>
+
+<body>
+    <a-scene>
+
+        <a-entity geometry="primitive: torusKnot; radius: 0.8; radiusTubular: 0.05; q: 7; p: 1" position="-3 1.6 -4"
+            material="color: #FFC65D"
+            animation="property: rotation; from: 0 0 0; to: 360 0 0; dur: 5000; easing: linear; loop: true">
+        </a-entity>
+
+        <a-torus-knot radius="0.8" radius-tubular="0.05" q="7" p="2" position="0 1.6 -4" color="#4CC3D9" arc="180"
+            animation="property: rotation; from: 0 0 0; to: 360 0 0; dur: 5000; easing: linear; loop: true">
+        </a-torus-knot>
+
+        <a-torus-knot radius="0.8" radius-tubular="0.05" q="7" p="3" position="3 1.6 -4" color="#F55193" arc="180"
+            animation="property: rotation; from: 0 0 0; to: 360 0 0; dur: 5000; easing: linear; loop: true">
+        </a-torus-knot>
+
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+</body>
+
+</html>

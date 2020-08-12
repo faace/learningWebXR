@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>Triangle Geometry</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-entity geometry="primitive: triangle; vertexA: 0 0 0; vertexB: 0 1 0; vertexC: -1 0 0" position="0 1.6 -4"
+            material="shader: flat; color: #FFC65D"
+            animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 5000; easing: linear; loop: true; dir: alternate;">
+        </a-entity>
+
+        <a-triangle vertex-a="0 0 0" vertex-b="1 0 0" vertex-c="0 1 0" material="shader: flat; side: double"
+            position="0 1.6 -4" color="#F55193"
+            animation="property: rotation; from: 0 0 0; to: 0 -360 0; dur: 5000; easing: linear; loop: true; dir: alternate;">
+        </a-triangle>
+
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+</body>
+
+</html>

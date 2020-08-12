@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>Ring Geometry</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-entity geometry="primitive: ring; segmentsTheta: 16; segmentsPhi: 2"
+            material="wireframe: true; color: #E78888" position="0 1.6 -3"> </a-entity>
+
+        <a-ring radius-inner="0.8" radius-outer="1.2" position="0 1.6 -3.1" color="#7BC8A4"> </a-ring>
+
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>Plane Geometry</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-entity position=" 0 1.6 -4" rotation="-30 30 0">
+            <a-entity geometry="primitive: plane;" material="shader: flat; side: double; color: #FFC65D">
+
+                <a-entity position="0.5 0 0"
+                    animation="property: rotation; from: 0 0 0; to: 0 -90 0; dur: 2000; easing: linear; loop: true; dir: alternate;">
+                    <a-plane material="shader: flat; side: double; color: #EF2D5E" position="0.5 0 0"></a-plane>
+
+                    <a-entity position="1 0 0"
+                        animation="property: rotation; from: 0 0 0; to: 0 -90 0; dur: 2000; easing: linear; loop: true; dir: alternate;">
+                        <a-plane material="shader: flat; side: double; color: #4CC3D9" position="0.5 0 0"></a-plane>
+                    </a-entity>
+                </a-entity>
+
+                <a-entity position="0 0.5 0"
+                    animation="property: rotation; from: 0 0 0; to: 90 0 0; dur: 2000; easing: linear; loop: true; dir: alternate;">
+                    <a-plane material="shader: flat; side: double; color: #7BC8A4" position="0 0.5 0"></a-plane>
+                </a-entity>
+
+                <a-entity position="-0.5 0 0"
+                    animation="property: rotation; from: 0 0 0; to: 0 90 0; dur: 2000; easing: linear; loop: true; dir: alternate;">
+                    <a-plane material="shader: flat; side: double; color: #E78888" position="-0.5 0 0"></a-plane>
+                </a-entity>
+
+                <a-entity position="0 -0.5 0"
+                    animation="property: rotation; from: 0 0 0; to: -90 0 0; dur: 2000; easing: linear; loop: true; dir: alternate;">
+                    <a-plane material="shader: flat; side: double; color: #D788E7" position="0 -0.5 0"></a-plane>
+                </a-entity>
+
+            </a-entity>
+        </a-entity>
+
+
+        <!-- <a-entity geometry="primitive: triangle; vertexA: 0 0 0; vertexB: 0 1 0; vertexC: -1 0 0" position="0 1.6 -4"
+            material="shader: flat; color: #FFC65D"
+            animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 5000; easing: linear; loop: true; dir: alternate;">
+        </a-entity>
+
+        <a-triangle vertex-a="0 0 0" vertex-b="1 0 0" vertex-c="0 1 0" material="shader: flat; side: double"
+            position="0 1.6 -4" color="#F55193"
+            animation="property: rotation; from: 0 0 0; to: 0 -360 0; dur: 5000; easing: linear; loop: true; dir: alternate;">
+        </a-triangle> -->
+
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>Sphere Geometry</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-entity geometry="primitive:sphere; radius:0.5;" position="0 2.6 -4" material="color: #FFC65D"> </a-entity>
+
+        <a-sphere radius="0.5" theta-start="45" theta-length="90" position="-2 1.6 -4"
+            material="side:double; color: #7BC8A4"
+            animation="property: rotation; from: 0 0 0; to: 360 0 0; dur: 5000; easing: linear; loop: true">
+        </a-sphere>
+
+        <a-entity geometry="primitive:sphere;radius:0.5;phiStart:45;phiLength:90;" position="2 1.6 -4"
+            material="side: double; color: #4CC3D9;"
+            animation="property: rotation; from: 0 0 0; to: 0 -360 0; dur: 5000; easing: linear; loop: true;">
+        </a-entity>
+
+        <a-sphere position="0 0.6 -4" material="wireframe:true;" segments-width="9" segments-height="9"
+            animation="property: rotation; from: 0 0 0; to: 0 0 360; dur: 8000; easing: linear; loop: true">
+        </a-sphere>
+
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+</body>
+
+</html>

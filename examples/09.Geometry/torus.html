@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>Torus Geometry</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="jade" src="../../images/material/jade.jpg">
+        </a-assets>
+
+        <a-entity geometry="primitive: torus; radius: 1; radiusTubular: 0.1" position="0 1.6 -4"
+            material="metalness: 0; roughness: 0; src:#jade;"
+            animation="property: rotation; from: 0 0 90; to: 0 360 90; dur: 5000; easing: linear; loop: true;">
+        </a-entity>
+
+        <a-torus radius="2" radius-tubular="0.05" position="0 1.6 -4" color="#4CC3D9" arc="180" material="side:double"
+            animation="property: rotation; from: 0 0 0; to: 360 0 0; dur: 5000; easing: linear; loop: true">
+        </a-torus>
+
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+</body>
+
+</html>

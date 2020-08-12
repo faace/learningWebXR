@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>Circle Geometry</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-entity geometry="primitive: circle;" material="color: #FFC65D" position="0 1.6 -3"
+            animation__length="property: geometry.thetaStart; from: 30; to: 0; dur: 500; easing: linear; loop: true; dir: alternate;"
+            animation__start="property: geometry.thetaLength; from: 270; to: 360; dur: 500; easing: linear; loop: true; dir: alternate;"
+            animation__move="property: position; from: -3 1.6 -3; to: 3 1.6 -3; dur: 3000; easing: linear; loop: true;">
+
+            <a-circle radius=" 0.1" position="0.4 0.5 0.1" material="color: #7BC8A4"> </a-circle>
+        </a-entity>
+
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>Box Geometry</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-entity geometry="primitive: box;" position="-2.5 2.0 -4" color="#EF2D5E"
+            animation="property: rotation; from:45 0 0; to: -45 0 0; dur: 2000; easing: linear; loop: true; dir:alternate">
+        </a-entity>
+
+        <a-box position="0 2.6 -4" material="wireframe:true; color: 7BC8A4" segments-width="2"
+            animation="property: rotation; from: 0 45 0; to: 0 -45 0; dur: 2000; easing: linear; loop: true; dir:alternate">
+        </a-box>
+
+        <a-box position="2.5 2.0 -4" color="#4CC3D9"
+            animation="property: rotation; from:45 0 0; to: -45 0 0; dur: 2000; easing: linear; loop: true; dir:alternate">
+        </a-box>
+
+        <a-entity
+            geometry="primitive: box; width:2; height:2; depth:2; segmentsWidth: 2; segmentsHeight: 2; segmentsDepth: 2"
+            animation="property: rotation; from:10 -45 0; to: 10 45 0; dur: 2000; easing: linear; loop: true; dir:alternate"
+            material="wireframe:true" position="0 0.6 -4" color="#FFC65D"></a-entity>
+
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+</body>
+
+</html>
