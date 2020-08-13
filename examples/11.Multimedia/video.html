@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>Video Multimedia</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <video id="bunny" src="../../src/videos/b.mp4" width="16" height="9" loop="true" preload="auto"
+                autoplay="true" playsinline></video>
+        </a-assets>
+        <!-- 
+        <a-cylinder theta-start1="120" theta-length1="120" open-ended="true" radius="3" height="4"
+            material="side:double" position="0 1.6 0" src="#bunny">
+        </a-cylinder> -->
+
+        <a-sky color="#ECECEC" src="#bunny"></a-sky>
+    </a-scene>
+</body>
+
+</html>

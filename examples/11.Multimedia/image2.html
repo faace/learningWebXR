@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>Image multimedia</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="cat" src="../../src/multimedia/cat.png" />
+        </a-assets>
+
+        <a-plane src="#cat" position="-1 1.8 -2"></a-plane>
+        <a-plane src="#cat" position="1 1.8 -2" material="transparent:true"></a-plane>
+
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+</body>
+
+</html>
