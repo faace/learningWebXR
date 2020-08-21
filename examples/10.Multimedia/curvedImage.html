@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>Image multimedia</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="painting" src="../../src/multimedia/painting.jpg" />
+        </a-assets>
+
+        <a-curvedimage src="#painting" radius="4" theta-start="120" theta-length="120" height="5.236"
+            position="0 1.6 0">
+        </a-curvedimage>
+
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+</body>
+
+</html>

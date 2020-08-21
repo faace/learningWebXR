@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>Sound Multimedia</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <audio id="aMinorWaltz" src="../../src/audios/aMinorWaltz.mp3" preload="auto"></audio>
+        </a-assets>
+
+        <a-camera>
+            <a-cursor></a-cursor>
+            <a-entity
+                animation="property: rotation.y; from: 0; to: 360; dur: 15000; easing: linear; loop: true; startEvents: click">
+                <a-box color="red" position="0 0 -4" sound="src: #aMinorWaltz; loop: true; on: click"></a-box>
+            </a-entity>
+        </a-camera>
+    </a-scene>
+
+
+</body>
+
+</html>

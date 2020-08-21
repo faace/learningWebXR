@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>Image multimedia</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="house" src="../../src/multimedia/house.png" />
+            <img id="tree" src="../../src/multimedia/tree.png" />
+            <img id="dog" src="../../src/multimedia/dog.png" />
+            <img id="cat" src="../../src/multimedia/cat.png" />
+            <img id="bird" src="../../src/multimedia/bird.png" />
+        </a-assets>
+
+        <a-image src="#house" width="5" height="2.5" position="0 1.6 -3"></a-image>
+        <a-image src="#cat" width="0.5" height="0.5" position="1.3 0.7 -2.7"></a-image>
+        <a-image src="#tree" width="2.2" height="2.2" position="1.3 1.35 -2.5"></a-image>
+
+        <a-image src="#dog" width="0.5" height="0.5" position="-0.7 0.7 -2"></a-image>
+
+        <a-image src="#bird" width="0.2" height="0.2" position="-0.4 2.2 -2"></a-image>
+        <a-image src="#bird" width="0.17" height="0.17" position="-0.2 2.2 -2"></a-image>
+        <a-image src="#bird" width="0.17" height="0.17" position="0 2.2 -2"></a-image>
+        <a-image src="#bird" width="0.17" height="0.17" position="0.2 2.2 -2"></a-image>
+
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+</body>
+
+</html>

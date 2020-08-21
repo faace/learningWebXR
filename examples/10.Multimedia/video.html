@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>Video Multimedia</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <video id="bunny" src="../../src/videos/bigBuckBunny.mp4" loop="true" preload="auto" autoplay="true" muted
+                playsinline></video>
+        </a-assets>
+        <a-video src="#bunny" width="4.8" height="2.7" position="-2 1.6 -4" rotation="0 30 0"></a-video>
+        <a-plane src="#bunny" width="4.8" height="2.7" position="2 1.6 -4" rotation="0 -30 0"></a-plane>
+
+        <a-box src="#bunny" position="0 1.6 -3"
+            animation="property: rotation; from:0 0 0; to: 360 360 0; dur: 10000; easing: linear; loop: true;"></a-box>
+
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+
+    <script type="text/javascript">
+        var scene = document.querySelector("a-scene");
+        scene.addEventListener("loaded", function () {
+            document.getElementById("bunny").play();
+        });
+    </script>
+</body>
+
+</html>
