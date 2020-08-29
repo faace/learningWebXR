@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>obj Model</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="house-obj" src="../../src/models/oldHouse/old-house.obj"></a-asset-item>
+            <a-asset-item id="house-mtl" src="../../src/models/oldHouse/old-house.mtl"></a-asset-item>
+        </a-assets>
+
+        <a-entity obj-model="obj: #house-obj; mtl: #house-mtl"></a-entity>
+
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+</body>
+
+</html>

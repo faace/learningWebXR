@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>glTf Model</title>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="flamingo" src="../../src/models/flamingo.glb"></a-asset-item>
+            <a-asset-item id="parrot" src="../../src/models/parrot.glb"></a-asset-item>
+            <a-asset-item id="stork" src="../../src/models/stork.glb"></a-asset-item>
+        </a-assets>
+
+        <a-entity rotation="0 45 0" position="-0.5 2 -4">
+            <a-entity gltf-model="#flamingo" position="-0.5 0.4 -1" scale="0.2 0.2 0.2"></a-entity>
+            <a-entity gltf-model="#parrot" position="0 0 0" scale="0.2 0.2 0.2"></a-entity>
+            <a-entity gltf-model="#stork" position="0.5 0.4 -1" scale="0.2 0.2 0.2"></a-entity>
+        </a-entity>
+
+
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4">
+            <a-entity gltf-model="url(../../src/models/cesiumMan.gltf)" rotation="-60 -90 -90">
+            </a-entity>
+        </a-plane>
+        <a-sky color="#ECECEC"></a-sky>
+
+    </a-scene>
+</body>
+
+</html>
