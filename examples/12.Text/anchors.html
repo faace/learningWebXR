@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>Anchors Text</title>
+</head>
+
+<body>
+    <a-scene background="color: #222">
+        <a-assets>
+            <a-mixin id="marker" geometry="primitive: plane; width: 0.02; height: 0.02" material="color: red"></a-mixin>
+        </a-assets>
+
+        <a-entity mixin="marker" position="-2.5 2.3 0.01"></a-entity>
+        <a-entity position="-2.5 2.3 0"
+            text="anchor: left; width: 1.5; color: white; value: [LEFT ANCHOR] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam">
+        </a-entity>
+
+        <a-entity mixin="marker" position="0 2.3 0.01"></a-entity>
+        <a-entity position="0 2.3 0"
+            text="anchor: center; width: 1.5; color: white; value: [CENTER ANCHOR] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam">
+        </a-entity>
+
+        <a-entity mixin="marker" position="2.5 2.3 0.01"></a-entity>
+        <a-entity position="2.5 2.3 0"
+            text="anchor: right; width: 1.5; color: white; value: [RIGHT ANCHOR] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam">
+        </a-entity>
+
+
+
+        <a-entity mixin="marker" position="-1.75 1.3 0.01"></a-entity>
+        <a-entity position="-1.75 1.3 0"
+            text="baseline: top; width: 1.5; color: white; value: [TOP BASELINE] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam">
+        </a-entity>
+
+        <a-entity mixin="marker" position="0 1.3 0.01"></a-entity>
+        <a-entity position="0 1.3 0"
+            text="baseline: center; width: 1.5; color: white; value: [CENTER BASELINE] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam">
+        </a-entity>
+
+        <a-entity mixin="marker" position="1.75 1.3 0.01"></a-entity>
+        <a-entity position="1.75 1.3 0"
+            text="baseline: bottom; width: 1.5; color: white; value: [BOTTOM BASELINE] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam">
+        </a-entity>
+
+        <a-camera position="0 1.8 2"> </a-camera>
+    </a-scene>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/aframe.min.js"></script>
+    <title>Align Text</title>
+</head>
+
+<body>
+    <a-scene background="color: #222">
+        <a-assets>
+            <a-mixin id="marker" geometry="primitive: plane; width: 0.02; height: 0.02" material="color: red"></a-mixin>
+        </a-assets>
+
+        <a-entity position="0 1.6 -2">
+            <a-entity mixin="marker" position="0 0.4 0.01"></a-entity>
+            <a-entity position="0 0.4 0" geometry="primitive: plane; width: auto; height: auto" material="color: #333"
+                text="color: yellow; align: left; value: [LEFT ALIGNED]; width: 2; ">
+            </a-entity>
+
+            <a-entity mixin="marker" position="0 0.2 0.01"></a-entity>
+            <a-entity position="0 0.2 0" geometry="primitive: plane; width: auto; height: auto" material="color: #eee"
+                text="color: blue; align: center; value: [CENTER ALIGNED]; width: 2; ">
+            </a-entity>
+
+            <a-entity mixin="marker" position="0 0 0.01"></a-entity>
+            <a-entity position="0 0 0" geometry="primitive: plane; width: auto; height: auto" material="color: #333"
+                text="color: red; align: right; value: [RIGHT ALIGNED]; width: 2; ">
+            </a-entity>
+
+
+        </a-entity>
+
+    </a-scene>
+
+</body>
+
+</html>
