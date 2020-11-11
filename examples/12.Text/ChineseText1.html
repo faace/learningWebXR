@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Text 1</title>
+    <script src="../../libs/aframe.min.js"></script>
+    <script src="../../libs/aframe-html-shader.min.js"></script>
+    <style>
+        .out {
+            position: fixed;
+            left: 0px;
+            top: 0;
+            z-index: -1;
+            opacity: 0;
+        }
+
+        .in {
+            font-weight: bolder;
+            text-align: center;
+            display: inline-block;
+            width: 640px;
+            height: 240px;
+            line-height: 80px;
+            font-size: 50px
+        }
+
+        .txt1 {
+            color: rgb(211, 35, 35);
+        }
+
+        .txt2 {
+            background-color: rgba(30, 200, 30, 0.5);
+            color: rgb(78, 17, 190);
+        }
+
+        .txt2 {
+            color: rgb(216, 185, 8);
+        }
+    </style>
+</head>
+
+<body>
+    <a-scene>
+        <a-plane width="4" height="1.5" material="shader: html; target: #txt" position="0 2 -2"> </a-plane>
+    </a-scene>
+
+    <div class="out">
+        <div id="txt" class="in">
+            <span class="txt1">通过插件</span> <br />
+            <span class="txt2">aframe-html-shader</span> <br />
+            <span class="txt3">来显示中文</span>
+        </div>
+    </div>
+</body>
+
+</html>
